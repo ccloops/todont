@@ -1,0 +1,24 @@
+{
+  "name": "todont",
+  "version": "1.0.0",
+  "description": "react todo list",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "watch": "webpack-dev-server --inline --hot",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccloops/todont.git"
+  },
+  "keywords": [
+    "react",
+    "todo"
+  ],
+  "author": "Catherine Looper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ccloops/todont/issues"
+  },
+  "homepage": "https://github.com/ccloops/todont#readme"
+}
