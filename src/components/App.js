@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import ReactDOM from 'react-dom';
 
 import TextInput from './TextInput';
+import List from './List';
 
 export default class App extends Component {
   constructor(props) {
@@ -21,11 +22,12 @@ export default class App extends Component {
   render() {
     const {
       handleInputChange,
-      state: {inputValue},
+      state: {inputValue, todos},
     } = this;
     return (
       <Fragment>
         <TextInput onChange={handleInputChange} value={inputValue}/>
+        <List items={todos} />
         <h1>hello</h1>
       </Fragment>
     );
