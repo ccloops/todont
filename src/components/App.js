@@ -14,6 +14,7 @@ export default class App extends Component {
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleItemCreation = this.handleItemCreation.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   handleInputChange({target: {value: inputValue}}) {
@@ -33,6 +34,19 @@ export default class App extends Component {
     }
   }
 
+  componentDidMount() {
+    document.addEventListener('keypress', this.handleKeyPress);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keypress', this.handleKeyPress);
+  }
+
+  handleKeyPress(event) {
+    if(event.keyCode === 13) {
+      this.handleItemCreation();
+    }
+  }
 
   render() {
     const {
