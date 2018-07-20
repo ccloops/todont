@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import TextInput from './TextInput';
 import List from './List';
+import Submit from './Submit';
 
 export default class App extends Component {
   constructor(props) {
@@ -12,23 +13,39 @@ export default class App extends Component {
       todos: [],
     };
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleItemCreation = this.handleItemCreation.bind(this);
   }
 
   handleInputChange({target: {value: inputValue}}) {
     this.setState({inputValue});
   }
 
+  handleItemCreation() {
+    const {
+      state: {todos, inputValue},
+    } = this;
+
+    if(inputValue.length) {
+      this.setState({
+        todos: [...todos, inputValue].sort(),
+        inputValue: '',
+      });
+    }
+  }
+
 
   render() {
     const {
       handleInputChange,
+      handleItemCreation,
       state: {inputValue, todos},
     } = this;
     return (
       <Fragment>
+        <h1>To Do or To Dont</h1>
         <TextInput onChange={handleInputChange} value={inputValue}/>
+        <Submit onSubmit={handleItemCreation}/>
         <List items={todos} />
-        <h1>hello</h1>
       </Fragment>
     );
   }
