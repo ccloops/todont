@@ -16,3 +16,8 @@ button {
   font-family: Helvetica;
   margin-left: 20px;
 }
+
+button:hover {
+  color: white;
+  background-color: goldenrod;
+}
