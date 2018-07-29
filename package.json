@@ -22,7 +22,9 @@
     "url": "https://github.com/ccloops/todont/issues"
   },
   "homepage": "https://github.com/ccloops/todont#readme",
-  "dependencies": {},
+  "dependencies": {
+    "styled-components": "^3.3.3"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",

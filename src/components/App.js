@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import TextInput from './TextInput';
 import List from './List';
 import Submit from './Submit';
+import StarRating from './Stars';
 
 export default class App extends Component {
   constructor(props) {
@@ -60,6 +61,7 @@ export default class App extends Component {
         <TextInput onChange={handleInputChange} value={inputValue}/>
         <Submit onSubmit={handleItemCreation}/>
         <List items={todos} />
+        <StarRating/>
       </Fragment>
     );
   }
