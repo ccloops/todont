@@ -15,32 +15,6 @@ To use this app - it is assumed that the user has familiarity with the tech and 
 
 Standard JavaScript with ES6, SASS, CSS, HTML, React
 
-### Tech/Framework Used
-
-* babel-core
-* babel-loader
-* babel-plugin-transform-object-rest-spread
-* babel-preset-env
-* babel-preset-react
-* css-loader
-* eslint-plugin-react
-* extract-text-webpack-plugin
-* html-webpack-plugin
-* node-sass
-* react
-* react-dom
-* react-router-dom
-* resolve-url-loader
-* sass-loader
-* superagent
-* uuid
-* webpack
-* webpack-dev-server
-* eslint
-* enzyme
-* enzyme-adapter-react-16
-* jest
-
 ### How to use?
 
 * Step 1. Fork and Clone the Repository.
