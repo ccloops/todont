@@ -29,7 +29,7 @@ export default class App extends Component {
 
     if(inputValue.length) {
       this.setState({
-        todos: [...todos, inputValue].sort(),
+        todos: [...todos, inputValue.toLowerCase()].sort(),
         inputValue: '',
       });
     }

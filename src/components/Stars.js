@@ -11,26 +11,26 @@ const StarContainer = styled.ul`
 `;
 
 const Star = styled.li`
-  background-color: ${({ isHighlighted, isCurrent }) => {
-    if(isCurrent) {
-      return '#FFDE5E';
-    } else if (isHighlighted) {
-      return '#F8C444';
-    } else {
-      return '#ccc';
-    }
-  }};
   height: 3em;
   width: 3em;
   display: inline-block;
-  outline: 2px solid blue;
+  position: relative;
+  svg {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 1em;
+  }
 `;
 
 export default class StarRating extends Component {
   constructor(props) {
     super(props);
+    
+    const rating = localStorage.getItem('rating');
+
     this.state = { 
-      rating: 0,
+      rating: rating || 0,
       hasVoted: false,
     };
 
@@ -52,6 +52,11 @@ export default class StarRating extends Component {
 
   handleClick(index) {
     this.setState({ hasVoted: true });
+    localStorage.setItem('rating', this.state.rating);
+  }
+
+  setFill(isHighlighted) {
+    return isHighlighted ? '#F8C444' : '#ccc';
   }
 
   render() {
@@ -59,22 +64,22 @@ export default class StarRating extends Component {
       handleHover,
       handleMouseOut,
       handleClick,
+      setFill,
       state: { rating },
     } = this;
 
     return (
       <StarContainer>
-
         {new Array(5).fill(null).map((item, index) => (
           <Star 
             key={`todo-item-${index}`}
-            isCurrent={(index + 1) === rating}
             onMouseOver={() => handleHover(index)}
             onMouseOut={handleMouseOut}
             onClick={() => handleClick(index)}
-            isHighlighted={(index + 1) <= rating}
           >
-            {item}
+            <svg height="25" width="23" fill={setFill((index + 1) <= rating)}>
+              <polygon points="9.9, 1.1, 3.3, 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" />
+            </svg>
           </Star>)
         )}
       </StarContainer>
