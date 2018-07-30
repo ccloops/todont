@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import TextInput from './TextInput';
 import List from './List';
 import Submit from './Submit';
-import StarRating from './Stars';
+import StarRating from './Stars-List';
 
 export default class App extends Component {
   constructor(props) {
