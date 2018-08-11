@@ -13,7 +13,7 @@ To use this app - it is assumed that the user has familiarity with the tech and 
 
 ### Code Style
 
-Standard JavaScript with ES6, SASS, CSS, HTML, React
+Standard JavaScript with ES6, SASS, CSS, HTML, React!
 
 ### How to use?
 
