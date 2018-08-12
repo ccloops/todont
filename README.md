@@ -3,7 +3,7 @@
 Catherine Looper
 ### Motivation
 
-In this project, I built a React frontend Todo List application. This app is awaiting persistence.
+In this project, I built a React frontend Todo List application. This app uses local storage for persistance. 
 
 In this application, I configured webpack to compile JavaScript and SASS into a bundle and configured babel to transpile JSX and ES6 to ES5 JavaScript. I was able to create and render React components to the DOM, add event listeners to React components, and update React component state.
 
