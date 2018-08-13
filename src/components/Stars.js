@@ -59,6 +59,7 @@ export default class StarRating extends Component {
   }
 
   render() {
+    console.log(this.state);
     const {
       handleHover,
       handleMouseOut,
