@@ -25,3 +25,5 @@ Standard JavaScript with ES6, SASS, CSS, HTML, React!
 
 MIT © Catherine Looper
 
+
+// uninstalling node-sass
